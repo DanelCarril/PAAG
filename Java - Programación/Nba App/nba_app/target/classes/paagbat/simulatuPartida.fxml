@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600" style="-fx-background-color: #f8f8f8;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="paagbat.controller.SimulatuPartida">
+   <children>
+      <StackPane prefHeight="69.0" prefWidth="600.0" style="-fx-background-color: #e0e0e0;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label prefHeight="32.0" prefWidth="129.0" text="PARTIDAK" textFill="#1e1e1e">
+               <font>
+                  <Font name="Segoe UI Bold" size="26.0" />
+               </font>
+            </Label>
+         </children>
+      </StackPane>
+      <HBox alignment="CENTER" layoutY="202.0" prefHeight="223.0" prefWidth="619.0" spacing="50" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="202.0">
+         <children>
+            <VBox prefHeight="191.0" prefWidth="313.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="27.0" prefWidth="215.0" style="-fx-border-color: #0052A4; -fx-background-color: #ffffff; -fx-border-radius: 2px; -fx-border-width: 2;">
+                     <children>
+                        <Label fx:id="bertakoaLabel" text="Bertako taldea">
+                           <HBox.margin>
+                              <Insets right="5.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="Segoe UI" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="bertakoPuntuak" text="0">
+                           <font>
+                              <Font name="Segoe UI" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label text="vs">
+                           <HBox.margin>
+                              <Insets left="10.0" right="10.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="Segoe UI Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="kanpokoPuntuak" text="0">
+                           <font>
+                              <Font name="Segoe UI" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="kanpokoaLabel" text="Kanpoko taldea">
+                           <HBox.margin>
+                              <Insets left="5.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="Segoe UI" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </HBox>
+                  <TextArea fx:id="textAreaSimulatuta" editable="false" prefHeight="154.0" prefWidth="313.0">
+                     <VBox.margin>
+                        <Insets top="9.0" />
+                     </VBox.margin></TextArea>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" spacing="10" />
+            <ImageView fitHeight="191.0" fitWidth="100.0" preserveRatio="true">
+               <image>
+                  <Image url="@nba.png" />
+               </image>
+               <effect>
+                  <Bloom />
+               </effect>
+            </ImageView>
+         </children>
+      </HBox>
+      <Button fx:id="volverButton" layoutX="33.0" layoutY="343.0" onAction="#handleReturn" prefHeight="30" prefWidth="50" style="-fx-background-color: transparent; -fx-text-fill: #444444; -fx-font-size: 16px; -fx-cursor: hand;" text="🡸" AnchorPane.bottomAnchor="21.0" AnchorPane.leftAnchor="33.0">
+         <font>
+            <Font name="System Bold" size="44.0" />
+         </font>
+      </Button>
+      <Line endX="475.6666259765625" layoutX="112.0" layoutY="160.0" startX="-82.16666412353516" stroke="#d0103a" AnchorPane.leftAnchor="29.333335876464844" AnchorPane.rightAnchor="30.666664123535156">
+         <effect>
+            <Bloom threshold="0.34" />
+         </effect>
+      </Line>
+      <Button fx:id="aukeraButton" layoutX="498.0" layoutY="105.0" onAction="#handleAukeratu" mnemonicParsing="false" style="-fx-background-color: #0052A4; -fx-text-fill: white; -fx-cursor: hand;" text="Aukeratu">
+         <font>
+            <Font name="Segoe UI" size="13.0" />
+         </font>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color opacity="0.5" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Button>
+      <ChoiceBox fx:id="choiceBoxBertakoa" layoutX="57.0" layoutY="105.0" prefHeight="25.0" prefWidth="129.0" />
+      <ChoiceBox fx:id="choiceBoxKanpokoa" layoutX="259.0" layoutY="105.0" prefHeight="25.0" prefWidth="129.0" />
+      <Label layoutX="221.0" layoutY="109.0" text="vs">
+         <font>
+            <Font name="Segoe UI" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="96.0" layoutY="84.0" text="Bertakoa">
+         <font>
+            <Font name="Segoe UI Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="295.0" layoutY="84.0" text="Kanpokoa">
+         <font>
+            <Font name="Segoe UI Bold" size="12.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

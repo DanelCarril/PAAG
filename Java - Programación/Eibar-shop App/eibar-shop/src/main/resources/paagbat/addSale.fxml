@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="paagbat.controller.AddSale">
+   <children>
+      <Pane layoutX="334.0" layoutY="149.0" prefHeight="124.0" prefWidth="230.0" style="-fx-border-color: #c9a9ea;">
+         <children>
+            <Label layoutX="13.0" layoutY="8.0" text="Add here the data for the sale">
+               <font>
+                  <Font name="System Italic" size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="54.0" layoutY="149.0" prefHeight="124.0" prefWidth="212.0" style="-fx-border-color: #c9a9ea;">
+         <children>
+            <Label layoutX="16.0" layoutY="8.0" text="Find here the id of the user">
+               <font>
+                  <Font name="System Italic" size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <HBox alignment="CENTER" prefHeight="91.0" prefWidth="600.0" style="-fx-background-color: #c9a9ea;">
+         <children>
+            <Label text="ADD new Sale">
+               <font>
+                  <Font name="System Bold" size="27.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <Label layoutX="359.0" layoutY="198.0" text="Id of the user: ">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ChoiceBox fx:id="choiceBoxUserId" layoutX="492.0" layoutY="196.0" />
+      <Label layoutX="357.0" layoutY="242.0" text="Id of the product: ">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ChoiceBox fx:id="choiceBoxProductId" layoutX="492.0" layoutY="239.0" />
+      <Label layoutX="68.0" layoutY="200.0" text="Username: " />
+      <TextField fx:id="userName" layoutX="139.0" layoutY="196.0" prefHeight="25.0" prefWidth="112.0" />
+      <Label fx:id="userIdLabel" layoutX="68.0" layoutY="243.0" text="ID: " />
+      <Button alignment="CENTER" contentDisplay="CENTER" layoutX="217.0" layoutY="241.0" mnemonicParsing="false" onAction="#handleUserId" text="GET" />
+      <Button layoutX="413.0" layoutY="315.0" mnemonicParsing="false" onAction="#handleAdd" text="ADD SALE" />
+      <Button layoutX="14.0" layoutY="106.0" mnemonicParsing="false" onAction="#handleReturn" text="↩" />
+      <Label fx:id="messageAdd" layoutX="54.0" layoutY="315.0">
+         <font>
+            <Font size="16.0" />
+         </font></Label>
+   </children>
+</Pane>

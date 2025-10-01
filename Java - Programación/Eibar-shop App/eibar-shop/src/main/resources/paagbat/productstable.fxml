@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="paagbat.controller.Products">
+   <children>
+      <HBox alignment="CENTER" prefHeight="80.0" prefWidth="600.0" style="-fx-background-color: #c9a9ea;">
+         <children>
+            <Label prefHeight="40.0" prefWidth="209.0" text="Product's Table">
+               <font>
+                  <Font name="System Bold" size="28.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <Button fx:id="addNewProduct" alignment="CENTER" contentDisplay="CENTER" layoutX="129.0" layoutY="347.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleAddProducts" prefHeight="27.0" prefWidth="114.0" text="Add new product" />
+      <Button fx:id="removeProduct" alignment="CENTER" contentDisplay="CENTER" layoutX="355.0" layoutY="347.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleDelete" prefHeight="27.0" prefWidth="114.0" text="Remove product" />
+      <Button fx:id="goBack" alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="93.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleReturn" prefHeight="27.0" prefWidth="29.0" text="↩" />
+      <TableView fx:id="tableViewProducts" layoutX="37.0" layoutY="128.0" prefHeight="200.0" prefWidth="539.0">
+        <columns>
+          <TableColumn fx:id="tableColumnId" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="tableColumnUserId" prefWidth="75.0" text="User_ID" />
+          <TableColumn fx:id="tableColumnProductName" prefWidth="75.0" text="Name" />
+          <TableColumn fx:id="tableColumnPrice" prefWidth="75.0" text="Price" />
+          <TableColumn fx:id="tableColumnProductDescription" prefWidth="75.0" text="Description" />
+        </columns>
+      </TableView>
+      <Label layoutX="196.0" layoutY="97.0" text="In stock / sold: ">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ChoiceBox layoutX="308.0" layoutY="94.0" prefHeight="25.0" prefWidth="94.0" fx:id="choiceSoldStock"/>
+   </children>
+</Pane>

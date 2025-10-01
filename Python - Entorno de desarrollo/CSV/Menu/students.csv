@@ -1,0 +1,4 @@
+students_id,first_name,last_name,born_day,email,phone,program,enrollment_date,nationality
+1,Danel,Carril,2005-11-03,carril.danel@uni.eus,666666666,euskera,2024-09-12,Spanish
+2,Mikel,Deza,2006-02-02,deza.mikel@uni.eus,677777777,Euskera,2024-09-12,Spanish
+1,Ibai,Gonzalez,2005-01-26,gonzalez.ibai@uni.eus,688888888,Euskera,2024-09-12,Spanish

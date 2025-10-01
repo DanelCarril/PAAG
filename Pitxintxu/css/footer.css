@@ -1,0 +1,79 @@
+/* Footer */
+.ft {
+    color: #ababab;
+}
+
+@media (max-width: 766px) {
+    .row.justify-content-between {
+        flex-direction: column !important;
+        align-items: center;
+        text-align: center;
+    }
+
+    .row.justify-content-between > .col-md-4 {
+        width: 100%;
+        max-width: 400px;
+        margin-bottom: 20px;
+    }
+
+    .row.justify-content-between .text-end {
+        text-align: center !important;
+        margin-top: 20px;
+    }
+}
+
+.icon-section {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 15px;
+}
+
+.icon-hover {
+    display: inline-block;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    color: inherit;
+}
+
+.icon-hover:focus,
+.icon-hover:active,
+.icon-hover:visited {
+    text-decoration: none;
+    outline: none;
+    border: none;
+    color: inherit;
+}
+
+.icon-wrapper {
+    position: relative;
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+}
+
+.icon-wrapper .icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 0.3s ease-in-out, transform 0.1s ease-in-out;
+    width: 100%;
+    height: 100%;
+}
+
+.icon-wrapper .hover {
+    opacity: 0;
+}
+
+.icon-hover:hover .hover {
+    opacity: 1;
+}
+
+.icon-hover:hover .default {
+    opacity: 0;
+}
+
+.icon-hover:hover .icon {
+    transform: scale(0.97);
+}

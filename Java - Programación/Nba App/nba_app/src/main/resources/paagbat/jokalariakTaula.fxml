@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400" prefWidth="600" style="-fx-background-color: #f8f8f8;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="paagbat.controller.JokalariakTaula">
+   <children>
+      <StackPane prefHeight="69.0" prefWidth="600.0" style="-fx-background-color: #e0e0e0;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label prefHeight="32.0" prefWidth="159.0" text="JOKALARIAK" textFill="#1e1e1e">
+               <font>
+                  <Font name="Segoe UI Bold" size="26.0" />
+               </font>
+            </Label>
+         </children>
+      </StackPane>
+      <Label layoutX="448.0" layoutY="82.0" text="Admin:" textFill="#555" AnchorPane.rightAnchor="80.0" fx:id="adminLabel">
+         <font>
+            <Font name="Segoe UI Bold" size="14.0" />
+         </font>
+      </Label>
+      <HBox alignment="CENTER" layoutX="0" layoutY="116.0" prefHeight="239.0" prefWidth="600" spacing="50" AnchorPane.bottomAnchor="45.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="116.0">
+         <children>
+            <ImageView fitHeight="242.0" fitWidth="100.0" preserveRatio="true">
+               <image>
+                  <Image url="@nba.png" />
+               </image>
+               <effect>
+                  <Bloom />
+               </effect>
+            </ImageView>
+            <TableView fx:id="tableViewJokalariak" prefHeight="239.0" prefWidth="322.0">
+               <columns>
+                  <TableColumn fx:id="tableColumnIzena" prefWidth="102.00001525878906" style="background-color: #0052A4;" text="Izena" />
+                  <TableColumn fx:id="tableColumnAbizena" prefWidth="106.0" text="Abizena" />
+                  <TableColumn fx:id="tableColumnPosizioa" prefWidth="113.33328247070312" text="Posizioa" />
+               </columns>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </TableView>
+         </children>
+      </HBox>
+      <Button fx:id="volverButton" layoutX="33.0" layoutY="343.0" onAction="#handleReturn" prefHeight="30" prefWidth="50" style="-fx-background-color: transparent; -fx-text-fill: #444444; -fx-font-size: 16px; -fx-cursor: hand;" text="🡸" AnchorPane.bottomAnchor="21.0" AnchorPane.leftAnchor="33.0">
+         <font>
+            <Font name="System Bold" size="44.0" />
+         </font>
+      </Button>
+      <HBox alignment="CENTER" layoutX="14.0" layoutY="78.0" prefHeight="18.0" prefWidth="200.0">
+         <children>
+            <ChoiceBox fx:id="choiceTeam" prefHeight="25.0" prefWidth="110.0" />
+            <Label text=" 🡐 Taldeak">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

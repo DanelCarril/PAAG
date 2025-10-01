@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="390.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="paagbat.controller.ChooseTable">
+   <children>
+      <!-- Header con título -->
+      <HBox alignment="CENTER" prefHeight="91.0" prefWidth="600.0" style="-fx-background-color: #c9a9ea;">
+         <children>
+            <Label text="CHOOSE A TABLE">
+               <font>
+                  <Font name="System Bold" size="27.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+
+      <!-- Espacio donde se colocará el nombre de usuario en la parte superior derecha -->
+      <HBox alignment="CENTER" prefHeight="46.0" prefWidth="600.0">
+         <children>
+            <Label fx:id="adminName">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+         </children>
+         <HBox.margin>
+            <!-- Ajustando los márgenes para que no esté tan pegado a la esquina -->
+            <Insets right="20.0" top="10.0" />
+         </HBox.margin>
+      </HBox>
+
+      <!-- Sección de botones para elegir tabla -->
+      <VBox alignment="CENTER" prefHeight="238.0" prefWidth="600.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#handleUsers" text="Users Table">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#handleProduct" text="Products Table">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="50.0" right="50.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#handleSales" text="Sales Table">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+
+      <!-- Sección de Log Out -->
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#handleReturn" text="Log Out">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</VBox>

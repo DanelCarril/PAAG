@@ -1,0 +1,219 @@
+/* Body */
+body {
+    padding-top: 55px;
+}
+
+/* Navbar */
+.navbar-nav .nav-item {
+    margin-right: 30px;
+    transition: all 0.3s ease;
+}
+
+.navbar-brand {
+    margin-right: 50px;
+}
+
+.navbar-brand img {
+    height: 40px;
+    /* o el tamaño que necesites */
+    width: auto;
+    /* mantiene proporción */
+    max-width: 100%;
+    /* evita que se salga del contenedor */
+}
+
+.navbar-nav .nav-link {
+    color: #8b63a6;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #fedc1b;
+    transform: translateY(-2px);
+}
+
+.navbar-nav .nav-item:hover .nav-link {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+}
+
+/* Mapa */
+.map-section {
+    position: relative;
+    display: flex;
+    height: 300px;
+    overflow: hidden;
+}
+
+.info-box {
+    height: 100%;
+    width: 100vw;
+    background-color: #8b63a6;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    animation: shrinkLeft 2s ease-out forwards;
+    overflow: hidden;
+    padding: 10px;
+}
+
+.map-container {
+    flex-grow: 1;
+    height: 100%;
+    z-index: 1;
+}
+
+@keyframes shrinkLeft {
+    0% {
+        width: 100vw;
+    }
+
+    100% {
+        width: 30vw;
+    }
+}
+
+.store-title {
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #ffffff;
+    border-bottom: 3px solid #fedc1b;
+    padding-bottom: 10px;
+}
+
+.store-address {
+    font-size: 1rem;
+    color: #ccc;
+}
+
+.map {
+    width: 100%;
+    height: 100%;
+}
+
+/* Content */
+.additional-info {
+    background-color: #fafafa;
+    border-radius: 12px;
+    padding: 60px 0;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #8b63a6;
+    margin-bottom: 20px;
+}
+
+.ftmenu {
+    font-size: 1.15rem;
+    color: #9c9c9c;
+    line-height: 1.8;
+}
+
+.contact-options .contact-box {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.contact-options .contact-box:hover {
+    transform: translateY(-5px);
+}
+
+.contact-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #8b63a6;
+}
+
+.contact-data {
+    font-size: 1.1rem;
+    color: #666;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+}
+
+.as {
+    text-decoration: none;
+    color: inherit;
+}
+
+.as:hover {
+    color: #363636;
+}
+
+/* Acordeón Moderno y Elegante con tonos morados */
+#accordion {
+  max-width: 800px;
+  margin: 60px auto;
+  font-family: 'Segoe UI', sans-serif;
+  border: none;
+}
+
+/* Títulos del acordeón */
+#accordion .ui-accordion-header {
+  background-color: #f8f6fc;  /* Fondo claro */
+  color: #4c3a6d;  /* Color del texto */
+  border: none;
+  border-radius: 12px;
+  padding: 18px 24px;
+  margin-bottom: 12px;
+  font-size: 18px;
+  font-weight: 600;
+  position: relative;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.04);
+  transition: background 0.3s, color 0.3s, transform 0.2s ease;
+}
+
+#accordion .ui-accordion-header:hover {
+  background-color: #ece3f8;  /* Fondo cuando pasa el mouse */
+}
+
+/* Cabecera activa */
+#accordion .ui-accordion-header.ui-state-active {
+  background: #8b63a6 !important;  /* Fondo morado para el título activo */
+  color: #ffffff;  /* Texto blanco cuando está activo */
+  transform: scale(1.01);  /* Efecto de escala al abrir */
+}
+
+/* Icono personalizado (flecha) */
+#accordion .ui-accordion-header::after {
+  content: "▼";  /* Icono de flecha */
+  position: absolute;
+  right: 20px;
+  font-size: 16px;
+  color: inherit;
+  transition: transform 0.3s ease;
+}
+
+#accordion .ui-accordion-header.ui-state-active::after {
+  transform: rotate(180deg);  /* Rotación de la flecha cuando el acordeón está abierto */
+}
+
+/* Contenido */
+#accordion .ui-accordion-content {
+  background-color: #fff;  /* Fondo blanco para el contenido */
+  color: #4a4a4a;  /* Color del texto */
+  padding: 20px 24px;
+  border-radius: 0 0 12px 12px;
+  margin-top: -10px;
+  margin-bottom: 16px;
+  font-size: 18px;
+  line-height: 1.6;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+}
+
+/* Ocultar los íconos de jQuery UI */
+.ui-icon {
+  display: none !important;
+}

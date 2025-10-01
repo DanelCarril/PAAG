@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600" style="-fx-background-color: #f8f8f8;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="paagbat.controller.PartidakTaula">
+   <children>
+      <StackPane prefHeight="69.0" prefWidth="600.0" style="-fx-background-color: #e0e0e0;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label prefHeight="32.0" prefWidth="129.0" text="PARTIDAK" textFill="#1e1e1e">
+               <font>
+                  <Font name="Segoe UI Bold" size="26.0" />
+               </font>
+            </Label>
+         </children>
+      </StackPane>
+      <HBox alignment="CENTER" layoutY="189.33333333333334" prefHeight="223.0" prefWidth="600.0" spacing="50" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="189.0">
+         <children>
+            <TextArea fx:id="textAreaPartidak" prefHeight="136.0" prefWidth="363.0" style="-fx-font-size: 14;" />
+            <ImageView fitHeight="242.0" fitWidth="100.0" preserveRatio="true">
+               <image>
+                  <Image url="@nba.png" />
+               </image>
+               <effect>
+                  <Bloom />
+               </effect>
+            </ImageView>
+         </children>
+      </HBox>
+      <Button fx:id="volverButton" layoutX="33.0" layoutY="343.0" onAction="#handleReturn" prefHeight="30" prefWidth="50" style="-fx-background-color: transparent; -fx-text-fill: #444444; -fx-font-size: 16px; -fx-cursor: hand;" text="🡸" AnchorPane.bottomAnchor="21.0" AnchorPane.leftAnchor="33.0">
+         <font>
+            <Font name="System Bold" size="44.0" />
+         </font>
+      </Button>
+      <Line endX="475.6666259765625" layoutX="101.0" layoutY="167.0" startX="-82.16666412353516" stroke="#d0103a" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0">
+         <effect>
+            <Bloom threshold="0.34" />
+         </effect>
+      </Line>
+      <Label layoutX="34.0" layoutY="85.0" text="Jokatuta: " textFill="#555555">
+         <font>
+            <Font name="Segoe UI" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="34.0" layoutY="122.0" text="Taldea: " textFill="#555555">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ChoiceBox fx:id="choiceJokatuta" layoutX="111.0" layoutY="81.0" prefHeight="1.0" prefWidth="58.0">
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color opacity="0.20000000298023224" />
+               </color>
+            </DropShadow>
+         </effect>
+      </ChoiceBox>
+      <ChoiceBox fx:id="choiceTaldea" layoutX="111.0" layoutY="119.0" prefHeight="25.0" prefWidth="110.0">
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color opacity="0.20000000298023224" />
+               </color>
+            </DropShadow>
+         </effect>
+      </ChoiceBox>
+      <DatePicker fx:id="partidaData" layoutX="292.0" layoutY="81.0" prefHeight="25.0" prefWidth="129.0" promptText="Data" />
+      <Button layoutX="292.0" layoutY="119.0" mnemonicParsing="false" onAction="#handleBistaratu" style="-fx-background-color: #0052A4; -fx-text-fill: white; -fx-cursor: hand;" text="Bistaratu">
+         <font>
+            <Font name="Segoe UI" size="13.0" />
+         </font>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color opacity="0.5" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Button>
+      <Button layoutX="376.0" layoutY="119.0" mnemonicParsing="false" onAction="#handleGarbitu" style="-fx-background-color: #d0103a; -fx-text-fill: white; -fx-cursor: hand;" text="Garbitu">
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color opacity="0.5" />
+               </color>
+            </DropShadow>
+         </effect>
+         <font>
+            <Font name="Segoe UI" size="13.0" />
+         </font>
+      </Button>
+      <Button layoutX="519.0" layoutY="81.0" mnemonicParsing="false" onAction="#handleEditatu" style="-fx-background-color: #d0103a; -fx-text-fill: white; -fx-cursor: hand;" text="Editatu">
+         <font>
+            <Font name="Segoe UI" size="13.0" />
+         </font>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color opacity="0.5" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Button>
+      <Button layoutX="509.0" layoutY="119.0" mnemonicParsing="false" onAction="#handleSimulatu" style="-fx-background-color: #0052A4; -fx-text-fill: white; -fx-cursor: hand;" text="Simulatu">
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color opacity="0.5" />
+               </color>
+            </DropShadow>
+         </effect>
+         <font>
+            <Font name="Segoe UI" size="13.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
